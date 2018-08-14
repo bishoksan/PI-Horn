@@ -1,0 +1,1 @@
+utils.c:26: Warning: def'n of func __VERIFIER_assert at utils.c:26 (sum 8277) conflicts with the one at /media/sf_share_vm//loop-new/assert.h:3 (sum 33104); keeping the one at /media/sf_share_vm//loop-new/assert.h:3.

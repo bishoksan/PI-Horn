@@ -1,0 +1,54 @@
+new38(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=C, J= 1000000, K=L+M, L=B, M=C, 
+          N=O+ 1, O=A, P= 1, new33(N,K,C,D,E,F,G,H).
+new38(A,B,C,D,A,B,C,D) :- E>= 1000000, E=C, F= 1000000.
+new37(A,B,C,D,E,F,G,H) :-  1=<I, J= 1, I=C, new38(A,B,C,D,E,F,G,H).
+new35(A,B,C,D,E,F,G,H) :- I=J, new37(A,B,I,J,E,F,G,H).
+new34(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=B, J= 1000000, 
+          new35(A,B,C,D,E,F,G,H).
+new33(A,B,C,D,E,F,G,H) :- new34(A,B,C,D,E,F,G,H).
+new32(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=C, J= 1000000, K=L+M, L=B, M=C, 
+          N=O+ 1, O=A, P= 1, new27(N,K,C,D,E,F,G,H).
+new31(A,B,C,D,E,F,G,H) :-  1=<I, J= 1, I=C, new32(A,B,C,D,E,F,G,H).
+new31(A,B,C,D,A,B,C,D) :-  1>=E+ 1, F= 1, E=C.
+new29(A,B,C,D,E,F,G,H) :- I=J, new31(A,B,I,J,E,F,G,H).
+new28(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=B, J= 1000000, 
+          new29(A,B,C,D,E,F,G,H).
+new27(A,B,C,D,E,F,G,H) :- new28(A,B,C,D,E,F,G,H).
+new26(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=C, J= 1000000, K=L+M, L=B, M=C, 
+          N=O+ 1, O=A, P= 1, new18(N,K,C,D,E,F,G,H).
+new25(A,B,C,D,E,F,G,H) :-  1=<I, J= 1, I=C, new26(A,B,C,D,E,F,G,H).
+new24(A,B,B).
+new22(A,B,C) :- D>= 1, D=B, E= 0, new24(A,B,C).
+new22(A,B,C) :- D+ 1=< 0, D=B, E= 0, new24(A,B,C).
+new21(A,B,C,D,A,B,C,D) :- E= 1, F=< 1000000, F=A, G= 1000000, new22(A,E,H).
+new21(A,B,C,D,A,B,C,D) :- E= 0, F>= 1000001, F=A, G= 1000000, new22(A,E,H).
+new20(A,B,C,D,E,F,G,H) :- I=J, new25(A,B,I,J,E,F,G,H).
+new19(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=B, J= 1000000, 
+          new20(A,B,C,D,E,F,G,H).
+new19(A,B,C,D,E,F,G,H) :- I>= 1000000, I=B, J= 1000000, new21(A,B,C,D,E,F,G,H).
+new18(A,B,C,D,E,F,G,H) :- new19(A,B,C,D,E,F,G,H).
+new17(A,B,C,D,E,F,G,H) :- I= 0, new18(A,I,C,D,E,F,G,H).
+new16(A,B,C,D,E,F,G,H) :- I= 0, new27(A,I,C,D,E,F,G,H).
+new15(A,B,C,D,E,F,G,H) :- I= 0, new33(A,I,C,D,E,F,G,H).
+new13(A,B) :- new15(A,C,D,E,B,F,G,H).
+new13(A,B) :- new16(A,C,D,E,B,F,G,H).
+new13(A,B) :- new17(A,C,D,E,B,F,G,H).
+safe :- init(A), new13(A,B).
+new12(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=C, J= 1000000, K=L+M, L=B, M=C, 
+          N=O+ 1, O=A, P= 1, new3(N,K,C,D,E,F,G,H).
+new11(A,B,C,D,E,F,G,H) :-  1=<I, J= 1, I=C, new12(A,B,C,D,E,F,G,H).
+new10(A).
+new8(A,B,B) :- new10(A).
+new7(A,B,C) :- D= 0, D=B, E= 0, new8(A,B,C).
+new6(A,B,C,D,A,B,C,D) :- E= 1, F=< 1000000, F=A, G= 1000000, new7(A,E,H).
+new6(A,B,C,D,A,B,C,D) :- E= 0, F>= 1000001, F=A, G= 1000000, new7(A,E,H).
+new5(A,B,C,D,E,F,G,H) :- I=J, new11(A,B,I,J,E,F,G,H).
+new4(A,B,C,D,E,F,G,H) :- I+ 1=< 1000000, I=B, J= 1000000, new5(A,B,C,D,E,F,G,H).
+new4(A,B,C,D,E,F,G,H) :- I>= 1000000, I=B, J= 1000000, new6(A,B,C,D,E,F,G,H).
+new3(A,B,C,D,E,F,G,H) :- new4(A,B,C,D,E,F,G,H).
+new2(A,B,C,D,E,F,G,H) :- I= 0, new3(A,I,C,D,E,F,G,H).
+new1(A,B) :- new2(A,C,D,E,B,F,G,H).
+init(A).
+false :- init(A), new1(A,B).
+spec :- false.
+spec :- safe.

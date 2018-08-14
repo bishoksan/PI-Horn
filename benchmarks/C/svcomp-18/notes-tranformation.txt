@@ -1,0 +1,4 @@
+notes on transformation:
+
+local variables of main() that appear in assertions are moved out of main()
+as global variables before generating chcs.
