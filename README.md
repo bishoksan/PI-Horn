@@ -1,6 +1,6 @@
 # Preconditions inferrer for Horn clauses (PI-Horn)
 
-PI-Horn is a transformation-guided tool for inferring sufficient  preconditions for safety or unsafety of a program based on (Constrained) Horn clauses. It uses techniques such as abstract interpreation, partial evaluation, constraint specialisation and counterexample-guided program transformation and decomposition. 
+PI-Horn is a transformation-guided tool for inferring sufficient  preconditions for safety or unsafety of a program based on (Constrained) Horn clauses. It uses techniques such as abstract interpretation, partial evaluation, constraint specialisation and counterexample-guided program transformation and decomposition. 
 
 PI-Horn is an iterative method which maintains over-approximations of the sets of safe and unsafe states which are successively refined using abstract interpreation and program transformations. Furthermore, in each iteration of the method, only the set of states in the intersection of these approximations are considered, which are initialised to a universal set at the beginning. The method terminates when the intersection of safe and unsafe states is empty or the intersection does not reduce in the successive iteration. Then the sufficient conditions are derived from the sequences of safe and unsafe over-approximations.
 
@@ -56,9 +56,9 @@ calling `ciao fetch` at the source directory.
 **Input**: a set of Horn clauses together with `special clauses` for distinguished set of predicates. They
 are written using Prolog notation:
 
-e.g. a clause is written as: `h(X):- C, b1(X1),...,bn(Xn).` where `C` is a comman separated linear arithmetic constraints (`X>=10, Y=X+1`)
+e.g. a clause is written as: `h(X):- C, b1(X1),...,bn(Xn).` where `C` is a comma separated linear arithmetic constraints (`X>=10, Y=X+1`)
 
-The distinguished predicates are `init(X)` (encodes a set of initial states), 'false' (encodes a set of unsafe states) and `safe` (encodes a set of safe terminating states). The `special clauses` are clauses of the above form with these distinugished predicates on the head, e.g.,  `false :- C, b1(X1),...,bn(Xn).`
+The distinguished predicates are `init(X)` (encodes the set of initial states), 'false' (encodes the set of unsafe states) and `safe` (encodes the set of safe terminating states). The `special clauses` are clauses of the above form with these distinugished predicates on the head, e.g.,  `false :- C, b1(X1),...,bn(Xn).`
 
 **Output**: Sufficient preconditions for safety and unsafety of programs in terms of initial state variables.
 
