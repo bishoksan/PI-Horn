@@ -1,4 +1,4 @@
-:- bundle('RAHFT').
+:- bundle('PI-Horn').
 version('1.0').
 depends([
     core-[version>='1.16'],
@@ -7,7 +7,7 @@ depends([
     'github.com/jfmc/ciao_yices'
 ]).
 alias_paths([
-    rahft = 'src'
+    pihorn = 'src'
 ]).
 lib('src').
-cmd('src/rahft').
+cmd('src/pihorn').
