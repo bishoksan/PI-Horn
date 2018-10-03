@@ -75,6 +75,6 @@ This creates a platform specific binary `pihorn` at `dist/`
 directory, together with the collection of shared libraries for the
 dependencies.
 
-## References
+## Contact
 
-To appear
+Send your queries to `bishoksan@gmail.com`
