@@ -1,8 +1,8 @@
 # Preconditions inferrer for Horn clauses (PI-Horn)
 
-PI-Horn is a transformation-guided tool for inferring necessary and sufficient safety preconditions of a program based on (Constrained) Horn clauses. It uses techniques such as abstract interpreation, partial evaluation, constraint specialisation and counterexample-guided program transformation and decomposition. 
+PI-Horn is a transformation-guided tool for inferring sufficient  preconditions for safety or unsafety of a program based on (Constrained) Horn clauses. It uses techniques such as abstract interpreation, partial evaluation, constraint specialisation and counterexample-guided program transformation and decomposition. 
 
-PI-Horn is an iterative method which maintains over-approximations of the sets of safe and unsafe states which are successively refined using abstract interpreation and program transformations. Furthermore, in each iteration of the method, only the set of states in the intersection of these approximations are considered, which are initialised to a universal set at the beginning. The method terminates when the intersection of safe and unsafe states is empty or the intersection does not reduce in the successive iteration. Then the necessary and sufficient conditions are derived from the sequences of safe and unsafe over-approximations.
+PI-Horn is an iterative method which maintains over-approximations of the sets of safe and unsafe states which are successively refined using abstract interpreation and program transformations. Furthermore, in each iteration of the method, only the set of states in the intersection of these approximations are considered, which are initialised to a universal set at the beginning. The method terminates when the intersection of safe and unsafe states is empty or the intersection does not reduce in the successive iteration. Then the sufficient conditions are derived from the sequences of safe and unsafe over-approximations.
 
 
 
@@ -24,7 +24,7 @@ from git repository with `./ciao-boot.sh local-install`)
 You can automatically fetch, build, and install RAHFT using:
 
 ```sh
-ciao get github.com/bishoksan/RAHFT
+ciao get github.com/bishoksan/pihorn
 ```
 
 The following dependendencies (including third-party code) will be
@@ -51,28 +51,27 @@ calling `ciao fetch` at the source directory.
 
 ## Usage
 
-**Usage**: `rahft` \<*input file containing a set of Horn clauses*\>
+**Usage**: `pihorn` \<*input file containing a set of Horn clauses*\>
 
-**Input**: a set of Horn clauses together with integrity constraints. They
+**Input**: a set of Horn clauses together with `special clauses` for distinguished set of predicates. They
 are written using Prolog notation:
 
-e.g. a clause is written as: `h(X):- C, b1(X1),...,bn(Xn).`
+e.g. a clause is written as: `h(X):- C, b1(X1),...,bn(Xn).` where `C` is a comman separated linear arithmetic constraints (`X>=10, Y=X+1`)
 
-and an integrity constriant is written as `false :- C, b1(X1),...,bn(Xn).`
+The distinguished predicates are `init(X)` (encodes a set of initial states), 'false' (encodes a set of unsafe states) and `safe` (encodes a set of safe terminating states). The `special clauses` are clauses of the above form with these distinugished predicates on the head, e.g.,  `false :- C, b1(X1),...,bn(Xn).`
 
-**Output**: `safe` or `unsafe`.
+**Output**: Sufficient preconditions for safety and unsafety of programs in terms of initial state variables.
 
-The results of the analysis will be appended to the `result.txt` file in the current directory and also shown in the console.
 
 ## Generate a standalone binary distribution
 
 ```sh
 mkdir dist; cd dist
-ciaoc_sdyn ../src/rahft
+ciaoc_sdyn ../src/pihorn
 cp ../src/determinise.jar
 ```
 
-This creates a platform specific binary `rahft` at `dist/`
+This creates a platform specific binary `pihorn` at `dist/`
 directory, together with the collection of shared libraries for the
 dependencies.
 
