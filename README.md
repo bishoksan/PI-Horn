@@ -75,6 +75,13 @@ This creates a platform specific binary `pihorn` at `dist/`
 directory, together with the collection of shared libraries for the
 dependencies.
 
+## References
+
+
+`An iterative approach to precondition inference using constrained Horn clauses`, TPLP-18 by Bishoksan Kafle, John P. Gallagher, Graeme Gange, Peter Schachte, Harald Søndergaard and  Peter J. Stuckey
+
+Send your queries to `bishoksan@gmail.com`
+
 ## Contact
 
 Send your queries to `bishoksan@gmail.com`
