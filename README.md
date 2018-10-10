@@ -58,7 +58,7 @@ are written using Prolog notation:
 
 e.g. a clause is written as: `h(X):- C, b1(X1),...,bn(Xn).` where `C` is a comma separated linear arithmetic constraints (`X>=10, Y=X+1`)
 
-The distinguished predicates are `init(X)` (encodes the set of initial states), 'false' (encodes the set of unsafe states) and `safe` (encodes the set of safe terminating states). The `special clauses` are clauses of the above form with these distinugished predicates on the head, e.g.,  `false :- C, b1(X1),...,bn(Xn).` For technical reasons, we introduce two clauses, viz., `spec:- false.` and `spec:- safe`, defining specification predicates.
+The distinguished predicates are `init(X)` (encodes the set of initial states), 'false' (encodes the set of unsafe states) and `safe` (encodes the set of safe terminating states). The `special clauses` are clauses of the above form with these distinugished predicates on the head, e.g.,  `false :- C, b1(X1),...,bn(Xn).` For technical reasons, we introduce two clauses, viz., `spec:- false.` and `spec:- safe.`, defining specification predicates.
 
 **Output**: Sufficient preconditions for safety and unsafety of programs in terms of initial state variables.
 
