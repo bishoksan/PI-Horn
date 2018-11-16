@@ -78,7 +78,7 @@ dependencies.
 ## Using script to run the benchmarks
 In order to run all the benchmarks containing in the foloder <Benchmarks> and produce statistics, please run the command
 
-`./run_bench  <Benchmarks>`
+`./run_bench.sh  <Benchmarks>`
 
 The results will be in `result.txt`
 ## References
