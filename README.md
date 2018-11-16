@@ -75,7 +75,7 @@ This creates a platform specific binary `pihorn` at `dist/`
 directory, together with the collection of shared libraries for the
 dependencies.
 
-##Using script to run the benchmarks
+## Using script to run the benchmarks
 In order to run all the benchmarks containing in the foloder <Benchmarks> and produce statistics, please run the command
 
 `./run_bench  <Benchmarks>`
