@@ -4,7 +4,7 @@
 progs=$1 # folder containing benchmarks
 progs=$1
 START1=$(date +%s000)
-for file in $progs/*
+for file in $progs/*.pl
 do
   gtimeout  5m 	pihorn -pe  "$file"
 done
