@@ -16,15 +16,15 @@ manipulating finite tree automata.
 
 ## Requirements
 
-[Ciao](https://github.com/ciao-lang/ciao) 1.16 or newer (installed
+[Ciao](https://github.com/ciao-lang/ciao) 1.16  (installed
 from git repository with `./ciao-boot.sh local-install`)
 
 ## Build and installation
 
-You can automatically fetch, build, and install RAHFT using:
+You can automatically fetch, build, and install PI-Horn using:
 
 ```sh
-ciao get github.com/bishoksan/pihorn
+ciao get github.com/bishoksan/PI-Horn
 ```
 
 The following dependendencies (including third-party code) will be
