@@ -16,7 +16,7 @@ manipulating finite tree automata.
 
 ## Requirements
 
-[Ciao](https://github.com/ciao-lang/ciao) 1.16  (installed
+[Ciao](https://github.com/ciao-lang/ciao) 1.18 or newer  (installed
 from git repository with `./ciao-boot.sh local-install`)
 
 ## Build and installation
