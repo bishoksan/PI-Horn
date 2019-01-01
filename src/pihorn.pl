@@ -11,19 +11,20 @@ DNF convention:
 
 */
 
-:- module(pihorn, _).
+:- module(pihorn, [main/1] , [dynamic, datafacts]).
 
 % Input: a set of Horn clauses P with distinguished init, false and safe predicates
 %plus two clauses (spec:- false. and spec:- safe.) specifying specs.
 % Output: safety/unsafety suff preconditions for P wrt safe and false predicates
 
 
+:- use_module(library(streams)).
 :- use_module(library(format), [format/2, format/3]).
 :- use_module(library(system_extra), [mkpath/1,mktempdir_in_tmp/2, rmtempdir/1]).
 :- use_module(library(system)). % mktemp_in_tmp is available here
 :- use_module(library(pathnames), [path_basename/2, path_concat/3, path_split/3]).
 :- use_module(library(terms), [atom_concat/2]).
-:- use_module(library(prolog_sys), [statistics/2]).
+:- use_module(engine(runtime_control), [statistics/2]).
 :- use_module(library(lists)).
 :- use_module(library(terms_vars)).
 :- use_module(library(aggregates)).

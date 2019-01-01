@@ -1,4 +1,4 @@
-:- module(interpolantAutomaton_bck, [main/1], []).
+:- module(interpolantAutomaton_bck, [main/1], [dynamic, datafacts]).
 
 %specially tuned for backwards analysis, non-linear constraints are filtered out
 
@@ -23,14 +23,13 @@
 % report Nr. ISCAS-SKLCS-15-19,State Key Laboratory of Computer Science,
 % Institute of Software, Chinese Academy of Sciences.
 
-:- dynamic(interpolant/1).
-:- dynamic(ftaTransition/1).
+
 
 :- use_module(counterExampleYices).
 
+:- use_module(library(streams)).
 :- use_module(library(write)).
 :- use_module(library(read)).
-:- use_module(library(dynamic)).
 :- use_module(library(aggregates)).
 
 :- use_module(chclibs(interpolant)).
@@ -49,6 +48,9 @@
 
 :- include(chclibs(get_options)).
 :- include(chclibs(messages)).
+
+:- dynamic(interpolant/1).
+:- dynamic(ftaTransition/1).
 
 :- data flag/1. % TODO: use
 

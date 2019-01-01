@@ -2,6 +2,7 @@
 
 :- use_module(chclibs(program_loader)).
 
+:- use_module(library(streams)).
 :- use_module(library(write)).
 
 % Sanity Check: check the presence of spec:- false, spec:- safe and init():-   clauses, if  present returns

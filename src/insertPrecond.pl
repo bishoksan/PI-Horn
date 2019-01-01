@@ -1,4 +1,4 @@
-:- module(insertPrecond, _).
+:- module(insertPrecond, _, [dynamic]).
 
 :- use_module(chclibs(load_simple)).
 :- use_module(chclibs(common)).
@@ -7,6 +7,10 @@
 :- use_module(chclibs(canonical)).
 :- use_module(chclibs(linearize)).
 
+:- use_module(library(streams)).
+:- use_module(library(write)).
+:- use_module(library(read)).
+:- use_module(library(aggregates)).
 :- use_module(library(lists)).
 :- use_module(library(terms_vars)).
 :- use_module(negate).

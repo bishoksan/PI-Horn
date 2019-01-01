@@ -1,5 +1,6 @@
-:- module(counterExampleYices, [checkCounterExample/3, counterExample/2, readCex/2, separateLinearConstraints/3], []).
+:- module(counterExampleYices, [checkCounterExample/3, counterExample/2, readCex/2, separateLinearConstraints/3], [datafacts]).
 
+:- use_module(library(streams)).
 :- use_module(library(read)).
 :- use_module(library(write)).
 :- use_module(library(lists)).

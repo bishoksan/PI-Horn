@@ -1,4 +1,4 @@
-:- module(equiv, [equiv/3, main/1], []).
+:- module(equiv, [equiv/3, main/1], [dynamic]).
 /*
 Given a program P, its partially evaluated program P', and their respective models M and M', this program checks if M and M' are equivalent.
 */
@@ -8,7 +8,7 @@ Given a program P, its partially evaluated program P', and their respective mode
 :- dynamic pe_inv/1.
 
 :- use_module(library(lists)).
-:- use_module(library(dynamic)).
+:- use_module(library(streams)).
 :- use_module(library(read)).
 :- use_module(chclibs(load_simple)).
 :- use_module(chclibs(yices2_sat)).

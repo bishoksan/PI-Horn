@@ -1,8 +1,8 @@
-:- module(props,_).
+:- module(props,_, [dynamic]).
 
 :- use_module(library(write)).
 :- use_module(library(read)).
-:- use_module(library(dynamic)).
+:- use_module(library(streams)).
 :- use_module(library(lists)).
 :- use_module(library(aggregates)).
 :- use_module(chclibs(program_loader)).

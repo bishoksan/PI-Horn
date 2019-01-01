@@ -1,8 +1,8 @@
-:- module(precond, [main/1, precond/2, initCall/1, isIndentical/1], []).
+:- module(precond, [main/1, precond/2, initCall/1, isIndentical/1], [dynamic, datafacts]).
 
 :- use_module(library(write)).
 :- use_module(library(read)).
-:- use_module(library(dynamic)).
+:- use_module(library(streams)).
 :- use_module(library(lists)).
 :- use_module(library(aggregates)).
 :- use_module(chclibs(load_simple)).
