@@ -9,7 +9,9 @@ Given a program P, its partially evaluated program P', and their respective mode
 
 :- use_module(library(lists)).
 :- use_module(library(streams)).
+:- use_module(library(write)).
 :- use_module(library(read)).
+:- use_module(library(aggregates)).
 :- use_module(chclibs(load_simple)).
 :- use_module(chclibs(yices2_sat)).
 :- use_module(ciao_yices(ciao_yices_2)).
