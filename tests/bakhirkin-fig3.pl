@@ -19,7 +19,7 @@ x=x+1
 
 init(A,B).
 while(A,B):- init(A,B).
-while(A,B):-  inc_exit(A,B).
+while(A,B):-  inc_exit(A, B).
 if1(A,B):- A>=1,while(A,B).
 if1_exit(A,B):- if1(A,B), A>=100.
 if2(A,B):- A=<99, if1(A,B).
