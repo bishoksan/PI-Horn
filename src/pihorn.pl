@@ -292,7 +292,7 @@ verifyCPA(Prog, F_Int, F_QA, QACPA, F_CPA, OutputFile, F_WidenPoints, F_Traceter
 determinise_jar(Path) :-
 	( current_executable(ExecPath),
 	  path_split(ExecPath, Dir, _)
-	; bundle_path('RAHFT', 'src', Dir)
+	; bundle_path('PI-Horn', 'src', Dir)
 	),
 	path_concat(Dir, 'determinise.jar', Jar),
 	file_exists(Jar),
