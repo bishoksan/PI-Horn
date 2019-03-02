@@ -771,6 +771,10 @@ abstract_refine2(InitVars, _, _,  _, K, _, K2, _, _, _, _, _, _,_, _, _, _, _, _
 abstract_refine2(InitVars, Bounded, LogS,  Prog1, K, Result, K2, WithInterpolant, F_Int, F_QA, QA_CPA, F_CPA, F_SP,F_WidenPoints, F_TRACETERM, F_THRESHOLD, F_FTA, F_DFTA, F_SPLIT, F_REFINE,Prog_SAFE,  Result_SAFE,   F_Int_SAFE, F_QA_SAFE, QA_CPA_SAFE, F_CPA_SAFE, F_SP_SAFE,F_WidenPoints_SAFE, F_TRACETERM_SAFE, F_THRESHOLD_SAFE, F_FTA_SAFE, F_DFTA_SAFE, F_SPLIT_SAFE, F_REFINE_SAFE, _,_, Cs31, Cs3_SAFE1):-
         !,
         cond_assert_precond(Cs3_SAFE1, Cs31),
+	%also add as precond the cex constraints from previous iterations
+	findall(C, (trConstr(C), verbose_message([' trace unsafe: ', C])), TCsUnsafe),
+   	findall(C, (trConstrSafe(C), verbose_message([' trace safe: ', C])), TCsSafe),
+    	cond_assert_precond(TCsSafe, TCsUnsafe),
         retractall_fact(mixState(_)), %retract it, we need to replace it by the current one
         assertz_fact(mixState((Cs31, Cs3_SAFE1))),
         %write('gone frm here 3'), nl,
