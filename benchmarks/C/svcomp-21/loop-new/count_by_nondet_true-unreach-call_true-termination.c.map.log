@@ -1,0 +1,21 @@
+Invoking cilly_x86_64
+Using CIL 1.7.0 (See CIL_LICENSE.txt)
+Running VeriMAP visitors:
+ i2s ...       done (2 change(s)).
+ cil2map ...   done.
+ jbPrinter ... done.
+Statistics:
+ assignment:              4
+ function call:           3
+ if-then-else:            2
+  user-defined:           1
+  loop:                   1
+ goto:                    1
+  user-defined:           1
+ return:                  1
+  user-defined:           1
+ global:                 16
+  function definition:   12
+  function declaration:   3
+  variable definition:    1
+  variable declaration:   0

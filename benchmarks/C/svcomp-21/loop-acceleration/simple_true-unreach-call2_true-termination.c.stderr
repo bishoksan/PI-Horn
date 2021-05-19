@@ -1,0 +1,2 @@
+/media/sf_share_vm//loop-acceleration/simple_true-unreach-call2_true-termination.c:18: Warning: Body of function main falls-through. Adding a return statement
+utils.c:26: Warning: def'n of func __VERIFIER_assert at utils.c:26 (sum 8277) conflicts with the one at /media/sf_share_vm//loop-acceleration/simple_true-unreach-call2_true-termination.c:3 (sum 33104); keeping the one at /media/sf_share_vm//loop-acceleration/simple_true-unreach-call2_true-termination.c:3.
